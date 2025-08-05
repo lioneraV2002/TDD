@@ -69,6 +69,9 @@ This is the third homework repo from the Software Engineering Lab
 
 نوشتن آزمون پس از کدنویسی ممکن است پوشش ناقصی ایجاد کند، فقط مسیرهای اصلی را تست کرده و موارد مرزی یا باگ‌ها را نادیده بگیرد. این رویکرد اثربخشی تست را کاهش داده و حس کاذب صحت کد ایجاد می‌کند.
 
+
+---
+
 ### بخش دوم: به‌کارگیری TDD
 
 **پرسش ۴: نوشتن آزمون‌ها پیش از کدنویسی چگونه توسعه را تسهیل می‌کند؟**
@@ -88,3 +91,24 @@ TDD مشخصه‌ای واضح از عملکرد مورد نیاز ارائه م
 * **سربار اولیه:** نوشتن آزمون‌ها در ابتدا توسعه را کند می‌کند.
 * **نیاز به انضباط:** توسعه‌دهندگان باید منضبط باشند و چرخه قرمز-سبز-ریفکتور را دنبال کنند.
 * **خطر آزمون‌های بی‌اهمیت:** ممکن است آزمون‌ها بیش از حد ساده باشند و منطق کد را به‌خوبی تست نکنند.
+
+---
+
+### **تصاویر فرآیند تست:**
+
+تصاویر مربوط به فرآیند صورت گرفته حین بررسی تست ها و توسعه بر اساس تست به ترتیب آمده اند.
+
+- **همه تست‌ها اجرا شده (شامل تست‌های موفق و ناموفق به دلیل به‌روزرسانی نادرست تاریخچه تراکنش):**<br><br>  
+  <img src="pics/Screenshot%20(40).png" alt="All Tests Run" width="600" height="400"><br><br>
+
+- **تست `shouldThrowExceptionForNegativeBalanceWithdrawal` (ناموفق):**<br><br>  
+  <img src="pics/Screenshot%20(41).png" alt="Failed Test - Negative Balance Withdrawal" width="600" height="400"><br><br>
+
+- **تست `shouldThrowExceptionForNegativeBalanceWithdrawal` (موفق):**<br><br>  
+  <img src="pics/Screenshot%20(43).png" alt="Passed Test - Negative Balance Withdrawal" width="600" height="400"><br><br>
+
+- **تست `shouldSaveTransactionHistoryAfterCalculation` (ناموفق):**<br><br>  
+  <img src="pics/Screenshot%20(42).png" alt="Failed Test - Save Transaction History" width="600" height="400"><br><br>
+
+- **تست `shouldSaveTransactionHistoryAfterCalculation` (موفق):**<br><br>  
+  <img src="pics/Screenshot%20(44).png" alt="Passed Test - Save Transaction History" width="600" height="400"><br><br>
