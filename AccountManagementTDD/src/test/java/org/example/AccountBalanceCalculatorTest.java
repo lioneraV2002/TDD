@@ -29,6 +29,17 @@ public class AccountBalanceCalculatorTest {
     }
     
     @Test
+    void shouldSaveTransactionHistoryAfterCalculation() {
+        AccountBalanceCalculator.clearTransactionHistory();
+        List<Transaction> transactions = new ArrayList<>();
+        transactions.add(new Transaction(TransactionType.DEPOSIT, 100));
+
+        AccountBalanceCalculator.calculateBalance(transactions);
+
+        assertEquals(1, AccountBalanceCalculator.getTransactionHistory().size());
+    }
+
+    @Test
     public void testEmptyTransactionList() {
         int balance = AccountBalanceCalculator.calculateBalance(Collections.emptyList());
         assertEquals(0, balance);
