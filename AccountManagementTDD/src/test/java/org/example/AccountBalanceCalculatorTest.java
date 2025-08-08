@@ -18,6 +18,17 @@ public class AccountBalanceCalculatorTest {
     }
 
     @Test
+    void shouldThrowExceptionForNegativeBalanceWithdrawal() {
+        List<Transaction> transactions = new ArrayList<>();
+        transactions.add(new Transaction(TransactionType.DEPOSIT, 100));
+        transactions.add(new Transaction(TransactionType.WITHDRAWAL, 150));
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            AccountBalanceCalculator.calculateBalance(transactions);
+        });
+    }
+    
+    @Test
     public void testEmptyTransactionList() {
         int balance = AccountBalanceCalculator.calculateBalance(Collections.emptyList());
         assertEquals(0, balance);
